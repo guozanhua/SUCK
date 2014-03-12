@@ -2,9 +2,8 @@
 
 Initial code from tutorial at http://code.tutsplus.com/tutorials/how-to-add-your-own-tools-to-unitys-editor--active-10047
 
-I've followed this excellent editor extension tutorial to get a stard on tile-based editing in Unity. My own additions
-are on the way.  Aside from getting around some deprecated functions in the tutorial, all I've done so far is ensure 
-there isn't any division by zero.  
+I've followed this excellent editor extension tutorial to get a start on tile-based editing in Unity. Making tweaks as
+needed along the way.  
 
 */
 
@@ -18,17 +17,9 @@ public class Grid : MonoBehaviour {
 
 	public Color color = Color.white;
 
-    private const float MinGridSpace = 1.0f;
+	public bool isVisible = true;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    private const float MinGridSpace = 1.0f;
 
     void OnDrawGizmos() {
         Vector3 pos = Camera.current.transform.position;
